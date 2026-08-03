@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Initial plugin manifest for `unoff` (skills, agents, MCP servers, Penpot user config)
-- `unoff-create-plugin` skill library vendored into `skills/` from [skills.sh](https://skills.sh) (`npx skills add a-ng-d/unoff-skills`), with provenance in `skills-lock.json`
+- `unoff-create-plugin` skill library vendored into `skills/` from [skills.sh](https://skills.sh) (`npx skills add yelbolt/unoff-skills`), with provenance in `skills-lock.json`
 - `unoff-plugin-architect` agent — platform resolution, layer decomposition, sequencing, delegation
 - `unoff-canvas-bridge` agent — Canvas API, storage, document generation, UI↔Canvas messaging, Figma/Penpot parity
 - `unoff-ui` agent — Preact components, `@unoff/ui`, Nanostores, theming, Tolgee i18n, accessibility, types

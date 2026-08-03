@@ -1,10 +1,10 @@
-![GitHub last commit](https://img.shields.io/github/last-commit/a-ng-d/unoff-claude-plugin?color=informational) ![GitHub](https://img.shields.io/github/license/a-ng-d/unoff-claude-plugin?color=informational)
+![GitHub last commit](https://img.shields.io/github/last-commit/yelbolt/unoff-claude-plugin?color=informational) ![GitHub](https://img.shields.io/github/license/yelbolt/unoff-claude-plugin?color=informational)
 
 # unoff on Claude Code
 
 A [Claude Code](https://code.claude.com/) plugin for building, debugging, and extending **Figma** and **Penpot** plugins on the unoff stack — Preact UI, Canvas bridge, `@unoff/ui`, Nanostores, Tolgee, Supabase, and the dual Vite build.
 
-It ships the [unoff skill library](https://github.com/a-ng-d/unoff-skills) plus five layer-specialized agents that plan, implement, and gate changes across the architecture.
+It ships the [unoff skill library](https://github.com/yelbolt/unoff-skills) plus five layer-specialized agents that plan, implement, and gate changes across the architecture.
 
 ## Install
 
@@ -28,7 +28,7 @@ The architect always finishes by handing the diff to the reviewer.
 
 | Skill                 | Description                                                                                          | Source                                                                |
 | --------------------- | ---------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `unoff-create-plugin` | Master index for the unoff plugin skill library — Canvas, Bridge, UI, Config, and Externals layers   | [a-ng-d/unoff-skills](https://github.com/a-ng-d/unoff-skills)          |
+| `unoff-create-plugin` | Master index for the unoff plugin skill library — Canvas, Bridge, UI, Config, and Externals layers   | [yelbolt/unoff-skills](https://github.com/yelbolt/unoff-skills)          |
 
 Skills are sourced from [skills.sh](https://skills.sh) and vendored into `skills/`, with provenance tracked in `skills-lock.json`.
 
@@ -50,7 +50,7 @@ Skills are sourced from [skills.sh](https://skills.sh) and vendored into `skills
 ## Development
 
 ```bash
-git clone https://github.com/a-ng-d/unoff-claude-plugin.git
+git clone https://github.com/yelbolt/unoff-claude-plugin.git
 cd unoff-claude-plugin
 claude plugin validate .
 ```
@@ -58,7 +58,7 @@ claude plugin validate .
 To refresh the vendored skills from source:
 
 ```bash
-npx skills add a-ng-d/unoff-skills -s unoff-create-plugin -y --copy
+npx skills add yelbolt/unoff-skills -s unoff-create-plugin -y --copy
 mv .claude/skills/unoff-create-plugin skills/unoff-create-plugin
 rm -rf .agents .claude .kiro
 ```

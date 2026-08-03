@@ -2,7 +2,7 @@
   "version": 1,
   "skills": {
     "unoff-create-plugin": {
-      "source": "a-ng-d/unoff-skills",
+      "source": "yelbolt/unoff-skills",
       "sourceType": "github",
       "skillPath": "skills/unoff-create-plugin/SKILL.md",
       "computedHash": "3be572b3616b1143950d44e2cdf98d2519e66a8b1cc81559de6f6cc1c76b8d5e"
