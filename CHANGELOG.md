@@ -18,4 +18,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `unoff-conformance-reviewer` agent — quality gate for stack conventions, message contracts, platform parity, and build integrity
 - MCP servers: `figma`, `figma-desktop`, `penpot`
 - `settings.json` defaulting to the `unoff-plugin-architect` agent
+- Distribution through the [yelbolt marketplace](https://github.com/yelbolt/claude-marketplace) — `/plugin install unoff@yelbolt`
 - README and Mozilla Public License 2.0

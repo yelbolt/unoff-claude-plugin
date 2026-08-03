@@ -8,8 +8,17 @@ It ships the [unoff skill library](https://github.com/yelbolt/unoff-skills) plus
 
 ## Install
 
+From inside Claude Code, add the [yelbolt marketplace](https://github.com/yelbolt/claude-marketplace) once, then install the plugin:
+
 ```bash
-/plugin install unoff
+/plugin marketplace add yelbolt/claude-marketplace
+/plugin install unoff@yelbolt
+```
+
+The marketplace is shared with the other yelbolt plugins, so `/plugin marketplace add` is only needed the first time. To pick up a new release later:
+
+```bash
+/plugin marketplace update yelbolt
 ```
 
 ## Agents
@@ -30,7 +39,18 @@ The architect always finishes by handing the diff to the reviewer.
 | --------------------- | ---------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
 | `unoff-create-plugin` | Master index for the unoff plugin skill library — Canvas, Bridge, UI, Config, and Externals layers   | [yelbolt/unoff-skills](https://github.com/yelbolt/unoff-skills)          |
 
-Skills are sourced from [skills.sh](https://skills.sh) and vendored into `skills/`, with provenance tracked in `skills-lock.json`.
+Skills are sourced from [skills.sh](https://skills.sh) and vendored into `skills/`, with provenance tracked in `skills-lock.json`. Installing the plugin is enough — you do not need to add them separately.
+
+### Using the skills without the plugin
+
+The same library can be pulled into an unoff plugin project on its own, for a different agent or a pinned copy in the repo:
+
+```bash
+unoff add skills                      # git submodule, via @unoff/cli
+npx skills add yelbolt/unoff-skills   # skills.sh, any agent
+```
+
+`unoff add skills` tracks the library as a git submodule you update with `git submodule update --remote` — best when you want the version pinned in your project's history. `npx skills add` copies the files and installs into every detected agent directory (`.claude/`, `.cursor/`, …) — best for quick, agent-agnostic use.
 
 ## MCP servers
 
