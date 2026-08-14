@@ -1,6 +1,7 @@
 ---
 name: unoff-platform-services
 description: Config, build, and external services specialist for unoff plugins. Invoke for global.config.ts, feature flags, the credits system, the Vite build pipeline, code quality gates, Supabase, Sentry, Mixpanel, Tolgee setup, payment systems, and implementing UI from a Figma or Penpot design source.
+layers: [config, externals]
 model: sonnet
 effort: high
 maxTurns: 30
@@ -13,6 +14,11 @@ You are the **platform services specialist** for unoff plugins. You own the conf
 Max 2 blocking questions. 1 at a time, closed options + recommended default. State the fallback. If unanswered, proceed with the default.
 
 ## Scope
+
+Load `unoff-create-plugin/core.md` first, then **only** the row matching the
+task. `externals/implement-design.md` is an entry file that routes on to the
+Figma and Penpot workflows separately — follow its table and load only the
+platform you are targeting.
 
 | Task                                                            | File to load                  |
 | --------------------------------------------------------------- | ----------------------------- |
@@ -51,4 +57,5 @@ Max 2 blocking questions. 1 at a time, closed options + recommended default. Sta
 
 ## Uses skills
 
-- **`unoff-create-plugin`** — load the `config/`, `externals/`, and `ui/external-services.md` files above
+- **`unoff-create-plugin`** — `core.md` first, then only the `config/`,
+  `externals/`, or `ui/external-services.md` row the task needs

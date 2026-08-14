@@ -6,6 +6,26 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [0.2.0] - 2026-08-15
+
+### Added
+
+- **`unoff-create-plugin/core.md` — one file every agent loads first, and the single source of truth for the facts they all need**: stack conventions, the architecture, the four-point message contract, and the Figma/Penpot differences table. Those tables previously lived in up to four places at once (the skill index, the agent definitions, the rules template, individual layer files), so every agent paid for them repeatedly and any correction had to be made four times to stick
+- `ui/components/` — the `@unoff/ui` reference split by family (`actions`, `forms`, `layout`, `feedback`, `css-classes`), reached from `ui/component-library.md`
+- `externals/design/` — the Figma and Penpot design-implementation workflows as separate files, reached from `externals/implement-design.md`. A Figma task no longer loads the Penpot procedure, or the reverse
+
+### Changed
+
+- **The skill library is now loaded by need instead of by layer, cutting what an agent reads for a typical task by roughly 43%.** Measured on representative tasks: choosing and using a form component 51.5 KB → 28.9 KB, implementing a design on Penpot 42.5 KB → 18.7 KB, on Figma 42.5 KB → 25.1 KB, wiring a Penpot bridge action 22.7 KB → 17.5 KB
+  - `SKILL.md` is a pure routing index — 12.8 KB → 6.5 KB, paid by *every* agent on *every* task, so it was the single most expensive file in the library
+  - Routing is two-level: the index points at entry files, and entry files point at their own detail files. Splitting a large reference no longer touches the index
+  - `ui/component-library.md` 38.7 KB → 8.5 KB and `externals/implement-design.md` 29.7 KB → 4 KB are now entry files that route on
+  - Deduplication was deliberately conservative where content only looked repeated. The Canvas and Bridge files gave up 9.3%, and three were left untouched after review — a smaller saving than a mechanical pass would have claimed, and no lost information
+- **`unoff-plugin-architect` fixes the message contract before delegating**, writing out every `type`, its payload shape, its direction, and the union members to add. Because the contract is settled up front, `unoff-canvas-bridge`, `unoff-ui` and `unoff-platform-services` no longer negotiate through the architect and run **concurrently** on disjoint paths. Serialisation is now the exception, reserved for real data dependencies
+- **`unoff-conformance-reviewer` is scoped to the diff and runs its mechanical checks first.** It ran all seven checklist sections against every change and re-read layer documentation to confirm rules it already had; it now maps changed paths to the sections worth running, greps for the anti-patterns it used to look for by reading, and drops to `effort: medium`. It is the last gate before work is declared done, so its cost sat entirely on the critical path
+- Agent definitions keep short guardrails inline and link out for the full tables. A system prompt is loaded once and cached, whereas reading `core.md` costs a tool call — so the duplication that matters to remove is between *files*, not between a prompt and a file
+- The rules template no longer hardcodes the list of skill files. It points at `core.md` and `SKILL.md` instead, so future reorganisation of the library cannot leave it describing paths that moved
+
 ## [0.1.1] - 2026-08-03
 
 ### Removed
