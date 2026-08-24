@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [0.2.1] - 2026-08-24
+
+### Added
+
+- `agents/README.md` — the five agents documented in one place: what each owns, how the architect decides whom to spawn, and how context is loaded. The directory is described as the **neutral source of truth** shared with [`@unoff/cli`](https://github.com/yelbolt/unoff-cli) (`unoff add agents`), which emits the same definitions in the format each assistant expects — so a change to an agent is made here once instead of once per distribution
+
+### Changed
+
+- **`unoff-plugin-architect` now spawns only the specialists a change actually needs.** Each subagent is a cold start that reloads its own context, so an unnecessary one costs as much as a real one and returns nothing. The architect carries an explicit routing table — a change confined to `src/app/` goes to `unoff-ui` alone, a storage fix to `unoff-canvas-bridge` alone — and is told to make small, contained edits itself rather than delegate them. Concurrency applies to the specialists a change genuinely needs, and is explicitly not a reason to fan out to all three
+  - `unoff-conformance-reviewer` is no longer invoked unconditionally. It gates multi-layer work, anything touching the message contract or platform parity, and any explicit request — but not a one-line fix, where a review that can only confirm what is already known is cost without information
+- **`unoff-ui` and `unoff-canvas-bridge` drop to `effort: medium`.** Together they account for the majority of subagent usage, and most of their work is applying documented patterns rather than novel reasoning — the skill library already carries the decisions. `unoff-plugin-architect` and `unoff-platform-services` stay at `effort: high`, where planning and build/config changes still benefit
+
 ## [0.2.0] - 2026-08-15
 
 ### Added
