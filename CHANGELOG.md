@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- `agents/README.md` — the five agents documented in one place: what each owns, how the architect decides whom to spawn, and how context is loaded. The directory is described as the **neutral source of truth** shared with [`@unoff/cli`](https://github.com/yelbolt/unoff-cli) (`unoff add agents`), which emits the same definitions in the format each assistant expects — so a change to an agent is made here once instead of once per distribution
+- `agents/README.md` — the five agents documented in one place: what each owns, how the architect decides whom to spawn, and how context is loaded. The directory is described as the **neutral source of truth** shared with [`@unoff/cli`](https://github.com/yelbolt/unoff-cli) (`unoff add agents`), which emits the same definitions in the format each assistant expects — so a change to an agent is made here once instead of once per di<stribution
 
 ### Changed
 
