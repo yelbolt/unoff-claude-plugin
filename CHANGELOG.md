@@ -6,6 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [0.2.2] - 2026-09-01
+
+### Changed
+
+- **`unoff-create-plugin` skill library documents the `private get features()` pattern**, matching the refactor shipped in the Figma and Penpot templates (`@unoff/cli` 0.4.6). Every reference that used to show `const features = Component.features(planStatus, config, service, editor)` computed once in `render()` now shows a `private get features()` getter declared right after `static features` and right before `constructor` — every call site reads `this.features.X` instead of the four-argument static call
+  - `config/feature-flags.md` gains a new **Always Go Through the `features` Getter** section with a ✅/❌ comparison and the rationale: a component often checks the same feature in more than one place (`isActive`/`isBlocked`/`isNew` on one entry, or the same entry reused in a `Menu` option and in `render()`), and the getter is the one place that needs to know whether the call args come from `this.props` or `this.state`
+  - `ui/component-patterns.md` gains the matching **Always Read It Through `this.features`** section
+  - `config/credits-system.md`, `ui/component-library.md`, `ui/components/actions.md`, `ui/components/forms.md`, `ui/accessibility.md`, `ui/components/layout.md` and `ui/performance.md` — every code sample updated from `features.X` to `this.features.X`, and the "Use Static Features Pattern" best-practice examples in `component-library.md` and `performance.md` now show the getter declared alongside the static method
+- `skills-lock.json` — `unoff-create-plugin` skill hash refreshed to match the updated source in [yelbolt/unoff-skills](https://github.com/yelbolt/unoff-skills)
+
 ## [0.2.1] - 2026-08-24
 
 ### Added
