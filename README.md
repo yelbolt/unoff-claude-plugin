@@ -1,6 +1,6 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/yelbolt/unoff-claude-plugin?color=informational) ![GitHub](https://img.shields.io/github/license/yelbolt/unoff-claude-plugin?color=informational)
 
-# unoff on Claude Code
+# Unoff on Claude Code
 
 A [Claude Code](https://code.claude.com/) plugin for building, debugging, and extending **Figma** and **Penpot** plugins on the unoff stack — Preact UI, Canvas bridge, `@unoff/ui`, Nanostores, Tolgee, Supabase, and the dual Vite build.
 
