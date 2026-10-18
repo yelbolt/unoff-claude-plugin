@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "unoff",
   "version": "0.2.4",
-  "description": "Build Figma and Penpot plugins on the unoff stack — Preact UI, Canvas bridge, @unoff/ui, Nanostores, Tolgee, Vite — with layer-specialized agents and the unoff skill library",
+  "description": "Build Figma and Penpot plugins on the Unoff stack — Preact UI, Canvas bridge, @unoff/ui, Nanostores, Tolgee, Vite — with layer-specialized agents and the unoff skill library",
   "author": {
     "name": "Aurélien Grimaud",
     "url": "https://github.com/a-ng-d",
