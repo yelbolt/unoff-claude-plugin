@@ -10,6 +10,10 @@
   },
   "homepage": "https://github.com/yelbolt/unoff-claude-plugin",
   "repository": "https://github.com/yelbolt/unoff-claude-plugin",
+  "documentationUrl": "https://uno.ylb.lt/docs",
+  "supportUrl": "https://uno.ylb.lt/support",
+  "privacyPolicyUrl": "https://uno.ylb.lt/privacy",
+  "termsOfServiceUrl": "https://uno.ylb.lt/terms",
   "license": "MPL-2.0",
   "keywords": [
     "unoff",
