@@ -1,3 +1,7 @@
+---
+description: Neutral-format definitions of the five unoff plugin agents, shared by the Claude Code plugin and @unoff/cli.
+---
+
 # Unoff Agents
 
 Agent definitions for the unoff plugin architecture, in a **neutral format**.

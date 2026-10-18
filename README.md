@@ -1,5 +1,3 @@
-![GitHub last commit](https://img.shields.io/github/last-commit/yelbolt/unoff-claude-plugin?color=informational) ![GitHub](https://img.shields.io/github/license/yelbolt/unoff-claude-plugin?color=informational)
-
 # Unoff on Claude Code
 
 A [Claude Code](https://code.claude.com/) plugin for building, debugging, and extending **Figma** and **Penpot** plugins on the unoff stack — Preact UI, Canvas bridge, `@unoff/ui`, Nanostores, Tolgee, Supabase, and the dual Vite build.
@@ -51,21 +49,6 @@ npx skills add yelbolt/unoff-skills   # skills.sh, any agent
 ```
 
 `unoff add skills` tracks the library as a git submodule you update with `git submodule update --remote` — best when you want the version pinned in your project's history. `npx skills add` copies the files and installs into every detected agent directory (`.claude/`, `.cursor/`, …) — best for quick, agent-agnostic use.
-
-## MCP servers
-
-| Server          | Transport | URL                                                        | Notes                                     |
-| --------------- | --------- | ---------------------------------------------------------- | ----------------------------------------- |
-| `figma`         | http      | `https://mcp.figma.com/mcp`                                | Design context for `implement-design`     |
-| `figma-desktop` | http      | `http://127.0.0.1:3845/mcp`                                | Local Figma desktop app                   |
-| `penpot`        | http      | `${penpot_url}/mcp/stream?userToken=${penpot_token}`       | Requires the two user config values below |
-
-## Configuration
-
-| Key            | Required | Description                                                              |
-| -------------- | -------- | ------------------------------------------------------------------------ |
-| `penpot_url`   | no       | Penpot base URL — `https://design.penpot.app` for Cloud, or your own host |
-| `penpot_token` | no       | Penpot user token — Account → Integrations → MCP Server                   |
 
 ## Development
 

@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- `agents/README.md` — YAML frontmatter with a `description`, to satisfy the plugin validator
+
+### Removed
+
+- `README.md` — the **MCP servers** and **Configuration** sections, stale since the MCP servers and user configuration were removed in 0.1.1; they still documented `penpot_url` and `penpot_token`, which the plugin validator flagged as a credential sent to a remote URL
+- `README.md` — the shields.io badges, flagged by the validator as a remote URL host
 
 ## [0.2.3] - 2026-09-03
 
