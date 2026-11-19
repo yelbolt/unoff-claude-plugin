@@ -12,8 +12,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `.claude-plugin/icon.png` — plugin icon for the marketplace listing
 - `.claude-plugin/plugin.json` — `documentationUrl`, `supportUrl`, `privacyPolicyUrl` and `termsOfServiceUrl` listing metadata
 - `agents/README.md` — YAML frontmatter with a `description`, to satisfy the plugin validator
+- `agents/layers.json` — the architecture layers each agent owns, keyed by agent name; replaces the `layers:` frontmatter key
+
+### Changed
+
+- `agents/*.md` — `layers:` moved out of the frontmatter into `agents/layers.json`, so every agent frontmatter sticks to the keys Claude Code defines (the plugin directory refuses keys outside its allowed list)
+- `skills/unoff-create-plugin` — resynced from `yelbolt/unoff-skills`: the non-standard `platform:` and `metadata:` frontmatter keys are dropped from the detail files (their content already lives in each file's body)
 
 ### Removed
+
+- `settings.json` — the plugin no longer makes `unoff-plugin-architect` the default agent; the plugin directory accepts plugin settings only from Verified organizations. Start a session with `claude --agent unoff:unoff-plugin-architect` instead
 
 - `README.md` — the **MCP servers** and **Configuration** sections, stale since the MCP servers and user configuration were removed in 0.1.1; they still documented `penpot_url` and `penpot_token`, which the plugin validator flagged as a credential sent to a remote URL
 - `README.md` — the shields.io badges, flagged by the validator as a remote URL host

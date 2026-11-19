@@ -1,7 +1,6 @@
 ---
 name: figma-canvas-api
 description: Direct Figma Plugin API usage for node creation, style management, selection, and viewport operations. Use when writing Canvas-layer code that interacts with the Figma document via figma.* calls.
-platform: figma
 ---
 
 # Figma API — Canvas Manipulation

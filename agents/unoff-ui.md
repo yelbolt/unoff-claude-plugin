@@ -1,7 +1,6 @@
 ---
 name: unoff-ui
 description: UI layer specialist for unoff plugins. Invoke for Preact components, @unoff/ui composition, Nanostores state, CSS theming, Tolgee i18n, accessibility, error surfacing, performance, and the TypeScript types system under src/app/.
-layers: [ui]
 model: sonnet
 effort: medium
 maxTurns: 30

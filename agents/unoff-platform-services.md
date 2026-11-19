@@ -1,7 +1,6 @@
 ---
 name: unoff-platform-services
 description: Config, build, and external services specialist for unoff plugins. Invoke for global.config.ts, feature flags, the credits system, the Vite build pipeline, code quality gates, Supabase, Sentry, Mixpanel, Tolgee setup, payment systems, and implementing UI from a Figma or Penpot design source.
-layers: [config, externals]
 model: sonnet
 effort: high
 maxTurns: 30

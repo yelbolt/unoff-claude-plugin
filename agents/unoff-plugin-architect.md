@@ -1,7 +1,6 @@
 ---
 name: unoff-plugin-architect
 description: Orchestrator for unoff plugin work. Invoke to plan and sequence a feature, migration, or bug fix across the Canvas, Bridge, UI, Config, and Externals layers of a Figma or Penpot plugin built on the unoff stack.
-layers: [canvas, bridge, ui, config, externals]
 model: sonnet
 effort: high
 maxTurns: 30

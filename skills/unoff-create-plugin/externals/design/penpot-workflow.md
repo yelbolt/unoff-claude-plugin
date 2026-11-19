@@ -1,9 +1,6 @@
 ---
 name: penpot-design-workflow
 description: Penpot spec-to-code workflow using @penpot/mcp code execution against penpot.selection — no predefined inspection tools, no annotations, no get_screenshot. Use when implementing UI from a Penpot selection.
-platform: penpot
-metadata:
-  mcp-server: penpot
 ---
 
 # Penpot Design Workflow

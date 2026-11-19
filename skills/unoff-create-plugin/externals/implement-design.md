@@ -1,8 +1,6 @@
 ---
 name: implement-design
 description: Translates design specs (Figma or Penpot) into production-ready code with 1:1 visual fidelity. Use when implementing UI from a design spec, when user mentions "implement design", "generate code", "implement component", provides Figma URLs or has a Penpot selection open, or asks to build components matching design specs. Requires Figma MCP or Penpot MCP server connection depending on platform.
-metadata:
-  mcp-server: figma, figma-desktop, penpot
 ---
 
 # Implement Design

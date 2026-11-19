@@ -1,7 +1,6 @@
 ---
 name: penpot-canvas-api
 description: Direct Penpot Plugin API usage for shape creation, layout, fills, selection, and viewport operations. Use when writing Canvas-layer code that interacts with the Penpot document via penpot.* calls.
-platform: penpot
 ---
 
 # Penpot API — Canvas Manipulation

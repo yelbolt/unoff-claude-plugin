@@ -1,7 +1,6 @@
 ---
 name: figma-data-storage
 description: Patterns for persisting data using Plugin Data (node-level), Shared Plugin Data (cross-plugin), and Client Storage (user preferences) in Figma plugins. Use when storing metadata on nodes, syncing preferences, or implementing data migration.
-platform: figma
 ---
 
 # Data Storage — Figma

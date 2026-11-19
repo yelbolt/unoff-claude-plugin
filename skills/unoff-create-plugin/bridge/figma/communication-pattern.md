@@ -1,7 +1,6 @@
 ---
 name: figma-communication-pattern
 description: Message-passing architecture between the UI (React) and Canvas (Figma API) layers via parent.postMessage and figma.ui.postMessage. Use when wiring new actions, debugging UI-Canvas communication, or understanding the onmessage routing pattern on Figma.
-platform: figma
 ---
 
 # Communication Pattern: UI ↔ Canvas (Figma)

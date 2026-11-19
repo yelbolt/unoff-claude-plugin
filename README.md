@@ -23,13 +23,21 @@ The marketplace is shared with the other yelbolt plugins, so `/plugin marketplac
 
 | Agent                        | Owns                                                                                                 |
 | ---------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `unoff-plugin-architect`     | **Default.** Resolves the target platform, decomposes work by layer, sequences it, delegates, assembles |
+| `unoff-plugin-architect`     | **Entry point.** Resolves the target platform, decomposes work by layer, sequences it, delegates, assembles |
 | `unoff-canvas-bridge`        | `src/index.ts`, `src/canvas/`, `src/bridges/` — Canvas APIs, storage, document generation, UI↔Canvas messaging |
 | `unoff-ui`                   | `src/app/` — Preact components, `@unoff/ui`, Nanostores, theming, Tolgee i18n, a11y, types            |
 | `unoff-platform-services`    | `global.config.ts`, Vite build, feature flags, credits, Supabase/Sentry/Mixpanel, payments, design implementation |
 | `unoff-conformance-reviewer` | Quality gate — stack conventions, message-contract completeness, Figma/Penpot parity, build integrity |
 
 The architect always finishes by handing the diff to the reviewer.
+
+To run a whole session as the architect, start Claude Code with:
+
+```bash
+claude --agent unoff:unoff-plugin-architect
+```
+
+Or set `"agent": "unoff:unoff-plugin-architect"` in your own `.claude/settings.json`. Otherwise Claude Code delegates to the agents on its own when a task matches their description.
 
 ## Skills
 

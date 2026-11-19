@@ -1,0 +1,7 @@
+{
+  "unoff-canvas-bridge": ["canvas", "bridge"],
+  "unoff-conformance-reviewer": ["canvas", "bridge", "ui", "config", "externals"],
+  "unoff-platform-services": ["config", "externals"],
+  "unoff-plugin-architect": ["canvas", "bridge", "ui", "config", "externals"],
+  "unoff-ui": ["ui"]
+}

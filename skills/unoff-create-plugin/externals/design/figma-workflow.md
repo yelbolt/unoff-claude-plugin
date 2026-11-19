@@ -1,9 +1,6 @@
 ---
 name: figma-design-workflow
 description: Step-by-step Figma spec-to-code workflow — node ID extraction, get_metadata/get_screenshot/get_design_context, the three annotation categories, and 1:1 visual parity validation. Use when implementing UI from a Figma URL or figma-desktop selection.
-platform: figma
-metadata:
-  mcp-server: figma, figma-desktop
 ---
 
 # Figma Design Workflow

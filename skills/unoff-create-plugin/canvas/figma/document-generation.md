@@ -1,7 +1,6 @@
 ---
 name: figma-document-generation
 description: Composing structured Figma documents using the Tag, Paragraph, and Signature canvas components from unoff-template-figma. Use when generating plugin output frames with text blocks, labels, and plugin branding on the Figma canvas.
-platform: figma
 ---
 
 # Document Generation — Figma Canvas

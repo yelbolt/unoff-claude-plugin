@@ -1,7 +1,6 @@
 ---
 name: figma-bridge-functions
 description: Pure functions for Figma Canvas operations in the bridge layer. Use when creating bridge functions in src/bridges/, implementing canvas operations called from loadUI.ts, or understanding the action map pattern on Figma.
-platform: figma
 ---
 
 # Bridge Functions (Figma)

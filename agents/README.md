@@ -56,14 +56,26 @@ The rule is inline guardrails, on-demand tables.
 ---
 name: unoff-ui # invocation name, kebab-case
 description: ... # when to invoke — the routing signal
-layers: [ui] # architecture layers this agent owns
 model: sonnet # preferred capability tier
 effort: high # Claude Code only
 maxTurns: 30 # Claude Code only
 ---
 ```
 
-`layers` uses the **same vocabulary as functional specs** (`canvas`, `bridge`,
+Keep the frontmatter to these keys: they are the ones Claude Code defines for an
+agent, and the Claude plugin directory refuses any key outside its allowed list.
+
+## Layers
+
+The architecture layers each agent owns live in [`layers.json`](./layers.json),
+keyed by agent name, not in the frontmatter:
+
+```json
+{ "unoff-ui": ["ui"] }
+```
+
+`@unoff/cli` reads that file and carries the layers into the emitted Claude
+agents and the roles table. They use the **same vocabulary as functional specs** (`canvas`, `bridge`,
 `ui`, `config`, `externals`). That is what ties the three pieces together: a
 spec declares the layers it touches, the skill library is organised by layer,
 and each agent owns a set of layers. Given a spec, an assistant can resolve both

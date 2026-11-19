@@ -1,7 +1,6 @@
 ---
 name: penpot-data-storage
 description: Patterns for persisting data in Penpot plugins using penpot.localStorage (the only available storage mechanism). Use when storing auth tokens, preferences, or any plugin state in Penpot.
-platform: penpot
 ---
 
 # Data Storage — Penpot

@@ -1,7 +1,6 @@
 ---
 name: penpot-document-generation
 description: Composing structured Penpot documents using the Tag, Paragraph, and Signature canvas components from unoff-template-penpot. Use when generating plugin output boards with text blocks, labels, and plugin branding on the Penpot canvas.
-platform: penpot
 ---
 
 # Document Generation — Penpot Canvas

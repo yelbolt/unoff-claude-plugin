@@ -1,7 +1,6 @@
 ---
 name: penpot-bridge-functions
 description: Pure functions for Penpot Canvas operations in the bridge layer. Use when creating bridge functions in src/bridges/, implementing canvas operations called from loadUI.ts, or understanding the action map pattern on Penpot.
-platform: penpot
 ---
 
 # Bridge Functions (Penpot)

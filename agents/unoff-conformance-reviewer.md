@@ -1,7 +1,6 @@
 ---
 name: unoff-conformance-reviewer
 description: Quality gate for unoff plugin changes. Invoke after any implementation to verify stack conventions (Preact, Nanostores, PureComponent, Tolgee), message-contract completeness, Figma/Penpot parity, config and gating wiring, and build/test integrity.
-layers: [canvas, bridge, ui, config, externals]
 model: sonnet
 effort: medium
 maxTurns: 20

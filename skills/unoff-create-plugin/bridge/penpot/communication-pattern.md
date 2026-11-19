@@ -1,7 +1,6 @@
 ---
 name: penpot-communication-pattern
 description: Message-passing architecture between the UI (React) and Canvas (Penpot API) layers via penpot.ui.onMessage and penpot.ui.sendMessage. Use when wiring new actions, debugging UI-Canvas communication, or understanding the onMessage routing pattern on Penpot.
-platform: penpot
 ---
 
 # Communication Pattern: UI ↔ Canvas (Penpot)

@@ -1,11 +1,6 @@
 ---
 name: component-mapping
 description: Reference table mapping Figma component library names to @unoff/ui npm exports and their Storybook stories. Use when looking up which npm component corresponds to a Figma component, when navigating Storybook documentation, or when translating a Figma spec into code imports. Companion to implement-design and component-library skills.
-metadata:
-  figma-file: RDBmy7x5HfkZHpafVqHNWQ
-  figma-node: 3329:69503
-  storybook-url: https://ui.unoff.dev
-  npm-package: "@unoff/ui"
 ---
 
 # Component Mapping — Figma ↔ @unoff/ui ↔ Storybook
